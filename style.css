@@ -1,0 +1,266 @@
+:root {
+  --bg-color: #0b090a;
+  --card-bg: #161a1d;
+  --purple-accent: #9d4edd;
+  --purple-glow: #7b2cbf;
+  --text-color: #f8f9fa;
+  --muted-text: #b1a7a6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+/* Pantalla de Inicio / Intro */
+#intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #050505 0%, #1a0022 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  text-align: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.bday-badge {
+  display: inline-block;
+  background: rgba(157, 78, 221, 0.2);
+  border: 1px solid var(--purple-accent);
+  color: #e0aaff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.intro-content h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  color: var(--purple-accent);
+  text-shadow: 0 0 15px var(--purple-glow);
+  margin-bottom: 10px;
+}
+
+.intro-content p {
+  color: var(--muted-text);
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+#start-btn {
+  background: transparent;
+  color: var(--purple-accent);
+  border: 2px solid var(--purple-accent);
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.3);
+}
+
+#start-btn:hover {
+  background: var(--purple-accent);
+  color: #fff;
+  box-shadow: 0 0 25px var(--purple-glow);
+  transform: scale(1.05);
+}
+
+/* Banner superior */
+.song-banner {
+  background: #14001e;
+  color: var(--purple-accent);
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--purple-glow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.main-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.glow-text {
+  font-family: 'Cinzel', serif;
+  font-size: 3.2rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px var(--purple-glow), 0 0 20px var(--purple-accent);
+}
+
+.subtitle {
+  color: var(--muted-text);
+  font-size: 1.05rem;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+/* Sección de Cualidades */
+.qualities-section {
+  margin-bottom: 60px;
+}
+
+.qualities-section h2 {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  color: var(--purple-accent);
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.qualities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.quality-card {
+  background: var(--card-bg);
+  padding: 25px 20px;
+  border-radius: 12px;
+  border: 1px solid #2b2b2b;
+  text-align: center;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.quality-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--purple-accent);
+  box-shadow: 0 10px 20px rgba(157, 78, 221, 0.25);
+}
+
+.card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.quality-card h3 {
+  font-family: 'Cinzel', serif;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.quality-card p {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  line-height: 1.6;
+}
+
+/* Carta / Mensaje */
+.letter-container {
+  background: rgba(22, 26, 29, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(157, 78, 221, 0.25);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.highlight-intro {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.paragraph {
+  margin-bottom: 22px;
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  text-align: justify;
+}
+
+.paragraph strong {
+  color: var(--purple-accent);
+}
+
+.quote-box {
+  background: linear-gradient(90deg, #1d0029, #0b090a);
+  border-left: 4px solid var(--purple-accent);
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 0 10px 10px 0;
+  font-style: italic;
+  text-align: center;
+}
+
+.quote-box p {
+  color: #f1e6ff;
+  font-size: 1.1rem;
+}
+
+.note-box {
+  background: rgba(157, 78, 221, 0.1);
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px dashed var(--purple-accent);
+}
+
+.signature {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  font-family: 'Cinzel', serif;
+}
+
+.signature span {
+  color: var(--purple-accent);
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* Animaciones al hacer scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: var(--muted-text);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .glow-text {
+    font-size: 2.2rem;
+  }
+  .intro-content h1 {
+    font-size: 2.2rem;
+  }
+  .letter-container {
+    padding: 22px;
+  }
+}
